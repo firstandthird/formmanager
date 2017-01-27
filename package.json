@@ -1,6 +1,6 @@
 {
   "name": "formmanager",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Manages forms",
   "main": "dist/formmanager.js",
   "module": "lib/formmanager.js",
@@ -10,11 +10,11 @@
     "manage"
   ],
   "scripts": {
-    "build": "scriptkit",
+    "start": "scriptkit",
+    "build": "scriptkit build",
     "dev": "scriptkit dev",
     "test": "cat test/formmanager.test.dist.js | tape-run --render tap-spec",
-    "prod": "scriptkit --env production",
-    "prepublish": "npm run prod"
+    "prepublish": "scriptkit"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,11 @@
     "files": {
       "dist/formmanager.js": "lib/formmanager.js",
       "test/formmanager.test.dist.js": "test/formmanager.test.js"
+    },
+    "scripts": {
+      "babel": {
+        "exclude": [ "node_modules/tape-rollup/*" ]
+      }
     }
   },
   "dependencies": {
