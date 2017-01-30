@@ -1,6 +1,6 @@
 {
   "name": "formmanager",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Manages forms",
   "main": "dist/formmanager.js",
   "module": "lib/formmanager.js",
