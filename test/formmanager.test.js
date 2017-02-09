@@ -61,9 +61,10 @@ test('populate form', t => {
 
 test('input change event', t => {
   t.plan(1);
+  t.timeoutAfter(1000);
 
   class InputTest extends FormManager {
-    inputChange() {
+    inputChange(...args) {
       t.pass('Input event called');
     }
   }
@@ -87,6 +88,7 @@ test('input change event', t => {
 
 test('submit form', t => {
   t.plan(1);
+  t.timeoutAfter(1000);
 
   class SubmitTest extends FormManager {
     submit() {

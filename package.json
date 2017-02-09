@@ -1,6 +1,6 @@
 {
   "name": "formmanager",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-beta.4",
   "description": "Manages forms",
   "main": "dist/formmanager.js",
   "module": "lib/formmanager.js",
@@ -27,14 +27,14 @@
   },
   "homepage": "https://github.com/firstandthird/formmanager#readme",
   "devDependencies": {
-    "eslint-config-firstandthird": "^3.1.0",
-    "eslint-plugin-import": "^2.1.0",
-    "scriptkit": "0.0.18",
-    "simulant": "^0.2.2",
-    "static-server": "^2.0.3",
-    "tap-spec": "^4.1.1",
+    "eslint-config-firstandthird": "3.2.0",
+    "eslint-plugin-import": "2.2.0",
+    "scriptkit": "0.0.22",
+    "simulant": "0.2.2",
+    "static-server": "2.0.3",
+    "tap-spec": "4.1.1",
     "tape-rollup": "4.6.4",
-    "tape-run": "^2.1.5"
+    "tape-run": "2.1.6"
   },
   "eslintConfig": {
     "env": {
@@ -48,15 +48,17 @@
       "test/formmanager.test.dist.js": "test/formmanager.test.js"
     },
     "scripts": {
-      "babel": {
-        "exclude": [ "node_modules/tape-rollup/*" ]
+      "commonjs": {
+        "ignore": [
+          "node_modules/tape-rollup/*"
+        ]
       }
     }
   },
   "dependencies": {
-    "@firstandthird/formbuilder": "^1.0.0-beta.7",
-    "bequest": "^1.3.1",
-    "domodule": "^4.0.1",
-    "formobj": "^2.0.0"
+    "@firstandthird/formbuilder": "1.0.0-beta.7",
+    "bequest": "1.3.1",
+    "domodule": "5.0.3",
+    "formobj": "3.0.0"
   }
 }
